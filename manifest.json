@@ -1,0 +1,14 @@
+{
+    "name": "Canvas Class Average",
+    "version": "1.0",
+    "permissions": ["*://*.edu/*/grades"],
+    "description": "Displays the class average on canvas grades pages.",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+          "matches": ["*://*.edu/*/grades"],
+          "js": ["jquery.min.js", "showAverages.js"],
+          "run_at": "document_idle"
+        }
+      ]
+}
